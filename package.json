@@ -1,7 +1,11 @@
 {
   "name": "devio-liffmock-amplify",
   "version": "0.0.0",
-  "author": {"name": "KUSATAKE Daisuke", "email": "kusatake.daisuke@classmethod.jp", "url": "https://dev.classmethod.jp/author/kusatake-daisuke/"},
+  "author": {
+    "name": "KUSATAKE Daisuke",
+    "email": "kusatake.daisuke@classmethod.jp",
+    "url": "https://dev.classmethod.jp/author/kusatake-daisuke/"
+  },
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -11,10 +15,14 @@
   },
   "imports": {
     "#src/lib/liff-init": {
-      "storybook": "./src/lib/liff-init.mock.ts",
-      "default": "./src/lib/liff-init.ts"
+      "pull_request_preview": "./src/lib/liff-init/index.mock.ts",
+      "default": "./src/lib/liff-init/index.ts"
     },
-    "#*": ["./*", "./*.ts", "./*.tsx"]
+    "#*": [
+      "./*",
+      "./*.ts",
+      "./*.tsx"
+    ]
   },
   "dependencies": {
     "@line/liff": "2.26.0",
