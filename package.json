@@ -10,8 +10,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:mock": "AWS_PULL_REQUEST_ID=mock vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build:mock": "AWS_PULL_REQUEST_ID=mock tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
   },
   "imports": {
     "#src/lib/liff-init": {

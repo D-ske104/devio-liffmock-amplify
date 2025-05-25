@@ -1,9 +1,7 @@
-const getProfile = {
-  userId: "U1234567890",
-  displayName: "John Doe",
-  pictureUrl: "https://example.com/profile.jpg",
-  statusMessage: "Hello, world!",
-}
+import { mockConfig } from './config';
+
+// モック設定から値を取得
+const getProfile = mockConfig.profile;
 
 export {
   getProfile
