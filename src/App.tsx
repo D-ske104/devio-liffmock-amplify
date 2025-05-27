@@ -16,8 +16,7 @@ function App() {
         setMessage("LIFF init failed.");
         setError(`${e}`);
       });
-  });
-
+  }, []);
   return (
     <div className="App">
       <h1>create-liff-app</h1>
