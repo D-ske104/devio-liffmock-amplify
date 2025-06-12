@@ -1,13 +1,35 @@
 {
   "name": "devio-liffmock-amplify",
   "version": "0.0.0",
+  "author": {
+    "name": "KUSATAKE Daisuke",
+    "email": "kusatake.daisuke@classmethod.jp",
+    "url": "https://dev.classmethod.jp/author/kusatake-daisuke/"
+  },
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:mock": "AWS_PULL_REQUEST_ID=mock vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build:mock": "AWS_PULL_REQUEST_ID=mock tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "imports": {
+    "#src/lib/liff-init": {
+      "pull_request_preview": "./src/lib/liff-init/index.mock.ts",
+      "default": "./src/lib/liff-init/index.ts"
+    },
+    "#*": [
+      "./*",
+      "./*.ts",
+      "./*.tsx"
+    ]
   },
   "dependencies": {
     "@line/liff": "2.26.0",
+    "@line/liff-mock": "^1.0.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

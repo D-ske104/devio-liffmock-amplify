@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import liff from "@line/liff";
 import "./App.css";
+
+import { liffInit } from "#src/lib/liff-init";
 
 function App() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
-    liff
-      .init({
-        liffId: import.meta.env.VITE_LIFF_ID
-      })
+    liffInit()
       .then(() => {
         setMessage("LIFF init succeeded.");
       })
@@ -18,8 +16,7 @@ function App() {
         setMessage("LIFF init failed.");
         setError(`${e}`);
       });
-  });
-
+  }, []);
   return (
     <div className="App">
       <h1>create-liff-app</h1>
