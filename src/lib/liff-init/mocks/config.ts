@@ -3,7 +3,7 @@ export const mockConfig = {
   // モックユーザープロファイル設定
   profile: {
     userId: "U1234567890",
-    displayName: "KUSATAKE Daisuke",
+    displayName: "Mock User",
     pictureUrl: "https://example.com/profile.jpg",
     statusMessage: "お昼休みはもくもくモッキング",
   },
